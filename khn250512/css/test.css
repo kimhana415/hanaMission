@@ -1,0 +1,116 @@
+@charset "utf-8";
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.slide {
+  margin: 0 auto 20px;
+  width: calc(100% - 64px);
+  max-width: 1200px;
+}
+
+.text_section {
+  position: relative;
+  text-align: center;
+}
+
+.text_section::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  background-color: #333;
+}
+
+/* 타이틀 */
+.title {
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #fff;
+}
+
+/* 슬라이드 영역 */
+.slide_section {
+  position: relative;
+}
+
+.slide_section ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* 메뉴 */
+.slide_section ul li {
+  margin: 0 36px;
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* new 아이콘 */
+.slide_section ul li .new_icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 11%;
+  right: 16%;
+  color: #fff;
+  background-color: #253b82;
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* 메뉴 img */
+.slide_section ul li>img {
+  width: 100%;
+}
+
+/* 메뉴명 */
+.slide_section ul li .menu_name {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* arrow 버튼 */
+.slide_section .arrow_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* prev 버튼 */
+.slide_section .btn_prev {
+  left: 0;
+  background-image: url("../img/prev.png");
+}
+
+/* next 버튼 */
+.slide_section .btn_next {
+  right: 0;
+  background-image: url("../img/next.png");
+}

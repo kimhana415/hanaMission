@@ -1,0 +1,164 @@
+@charset "utf-8";
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 로고 */
+header .logo{
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* 메인 메뉴 */
+header .gnb ul {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* 몌뉴 항목 */
+header .gnb  li{
+  cursor: pointer;
+}
+
+.menu_food {
+  margin: 0 auto 20px;
+  width: calc(100% - 64px);
+  max-width: 1200px;
+}
+
+/* 검색 영억 */
+.search_section {
+  margin: 40px 0;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 검색 영역 상단 */
+.search_section .search_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 검색 영역 타이틀 */
+.search_section .search_top .title {
+  color: #444;
+}
+
+/* 검색 박스 */
+.search_section .search_top .search_box {
+  position: relative;
+}
+
+/* 검색 인풋 */
+.search_section .search_top .search_box .search_txt {
+  width: 240px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-indent: 4px;
+}
+
+/* 검색 아이콘 */
+.search_section .search_top .search_box .btn_search {
+  width: 36px;
+  height: 36px;
+  line-height: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 검색 영역 옵션 */
+.search_section .option {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+  border-top: 1px solid #ccc; 
+}
+
+/* 라벨 */
+.search_section .option li>label{
+  margin: 0 0 0 8px;
+  font-weight: 500;
+}
+
+.list_section {
+
+}
+
+.list_section ul {
+  display: flex;
+  gap: 8px;
+}
+
+.list_section ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 12px;
+  width: calc(100% / 4 - 6px);
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.list_section ul li:hover>img{
+  transform: scale(1.05);
+}
+
+.list_section ul li>img{
+  width: 100%;
+  transition: all ease 0.3s;
+  transform: scale(1.0);
+}
+
+.list_section ul li .txt_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 선물하기 버튼 */
+.list_section ul li .txt_box .btn_gift {
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #253b82;
+  cursor: pointer;
+}

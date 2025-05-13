@@ -1,0 +1,63 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+.visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 20px 100px 20px;
+  background-image: url("../img/drink_visual.jpg");
+  background-size: cover;
+}
+/* 텍스트 영역 */
+.text_section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+/* 메인 텍스트 */
+.text_section .main_txt {
+  font-size: 52px;
+  font-weight: 400;
+}
+/* 서브 텍스트 */
+.text_section .sub_txt {
+  font-size: 24px;
+  font-weight: 400;
+}
+/* 텍스트 볼드 */
+.text_section .sub_txt .txt_bold{
+  font-weight: 600;
+}
+/* 탭 영역 */
+.tab_section {
+  display: table;
+  border-collapse: collapse;
+}
+/* 탭 항목 */
+.tab_section li {
+  list-style: none;
+  display: table-cell;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+}
+/* 탭 선택, 호버 시 */
+.tab_section .on,
+.tab_section li:hover {
+  font-weight: 500;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
