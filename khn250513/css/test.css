@@ -45,7 +45,7 @@ header .gnb ul {
 }
 
 /* 몌뉴 항목 */
-header .gnb  li{
+header .gnb ul li{
   cursor: pointer;
 }
 
