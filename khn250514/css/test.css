@@ -1,0 +1,189 @@
+@charset "utf-8";
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu_beverage {
+  margin: 0 auto 20px;
+  width: calc(100% - 64px);
+  max-width: 1200px;
+}
+
+.list_section ul {
+  display: flex;
+  gap: 8px;
+}
+
+/* 메뉴 항목 */
+.list_section ul li {
+  width: calc(100% / 4 - 6px);
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+.list_section ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+    padding: 40px 12px;
+}
+
+/* 이미지 */
+.list_section ul li a>img{
+  width: 100%;
+  transition: all ease 0.3s;
+  transform: scale(1.0);
+}
+
+/* 이미지 호버 시 */
+.list_section ul li a>img:hover{
+  transform: scale(1.05);
+}
+
+/* 텍스트 박스 */
+.list_section ul li a .txt_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 선물하기 버튼 */
+.list_section ul li a .txt_box .btn_gift {
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #253b82;
+  cursor: pointer;
+}
+
+/* 메뉴 상세 */
+.list_section ul li .menu_detail {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border: 1px solid #ccc;
+}
+.list_section ul li .menu_detail::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+/* 닫기 버튼 */
+.list_section ul li .menu_detail .btn_close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* 상세 내용 */
+.list_section ul li .menu_detail .detail_content {
+  padding: 20px 32px;
+  word-break: keep-all;
+}
+
+/* 타이틀 박스 */
+.list_section ul li .menu_detail .detail_content .title_box {
+  line-height: 1.3;
+  letter-spacing: 0.1px;
+
+}
+
+/* 메뉴명 한국어 */
+.list_section ul li .menu_detail .detail_content .title_box .title_kr {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* 메뉴명 영어 */
+.list_section ul li .menu_detail .detail_content .title_box .title_en {
+  margin: 4px 0 0 0;
+  font-size: 15px;
+  color: #999;
+}
+
+/* 상세 설명 */
+.list_section ul li .menu_detail .detail_content .detail_txt {
+  margin: 16px 0 0 0;
+  padding: 16px 0 0 0;
+  line-height: 1.8;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #333;
+}
+
+/* 성분 */
+.list_section ul li .menu_detail .detail_ingredient {
+  padding: 12px 32px;
+  width: 100%;
+  line-height: 1.6;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  font-weight: 300;
+  background-color: #f5f5f5;
+}
+
+/* 성분표 */
+.list_section ul li .menu_detail .detail_ingredient .nutrition {
+  display: flex;
+  gap: 24px;
+}
+
+.list_section ul li .menu_detail .detail_ingredient .nutrition>div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: calc(100% / 2);
+}
+
+/* 성분표 왼쪽 */
+.list_section ul li .menu_detail .detail_ingredient .nutrition .left {
+  border-right: 1px solid #ccc;
+}
+
+/* 성분표 단위 */
+.list_section ul li .menu_detail .detail_ingredient .nutrition>div>div>span {
+  font-weight: 600;
+}
+
+/* 카페인 */
+.list_section ul li .menu_detail .detail_ingredient .caffeine {
+  font-weight: 600;
+  color: #253b82;
+}
