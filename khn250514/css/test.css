@@ -47,6 +47,7 @@ a {
   align-items: center;
   gap: 40px;
   padding: 40px 12px;
+  height: 100%;
 }
 
 /* 이미지 */
