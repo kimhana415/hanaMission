@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>test</title>
   <link rel="stylesheet" href="css/test.css" type="text/css">
 </head>
+
 <body>
   <!-- menu -->
-	<div class="menu_beverage">
-		<!-- 리스트 영역 -->
+  <div class="menu_beverage">
+    <!-- 리스트 영역 -->
     <div class="list_section">
       <ul>
         <li>
@@ -177,17 +179,18 @@
         </li>
       </ul>
     </div>
-	</div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(".list_section ul li a").click(function(){
+    $(".list_section ul li a").click(function () {
       $(this).parents("li").find(".menu_detail").show();
     });
 
-    $(".menu_detail .btn_close").click(function(){
+    $(".menu_detail .btn_close").click(function () {
       $(this).parents(".menu_detail").hide();
     });
   </script>
 </body>
+
 </html>
