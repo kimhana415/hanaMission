@@ -64,6 +64,6 @@ h2 {
 }
 
 /* 이름 */
-.list .item .text_box span {
+.list .item .text_box strong {
   color: #1bacac;
 }
