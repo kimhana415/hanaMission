@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: #fff;
+    background-color: #1c1b24;
+}
+
+li {
+  list-style: none;
+}
+
+.my_work {
+  margin: 20px auto;
+  width: calc(100% - 64px);
+  max-width: 1400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+h2 {
+  padding: 20px 0 60px 0;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.tab_section ul{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab_section ul li{
+  padding: 8px 60px;
+  position: relative;
+  border: 1px solid #1fa5aa;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tab_section ul li.on{
+  background-color: #11f7ff;
+  border: 1px solid #11f7ff;
+  color: #1c1b24;
+  font-weight: 500;
+}
+
+.tab_section ul li .num {
+  display: none;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  color: #fff;
+  background-color: #ff661f;
+  border-radius: 50%;
+}
+
+.tab_section ul li.on .num{
+  display: block;
+}
+.tab_section ul li:hover .num {
+  display: block;
+}
+
+.list_section {
+  margin: 40px 0;
+}
+
+.list_section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.list_section ul li {
+  width: calc(100% / 4 - 15px);
+  height: 250px;
+  position: relative;
+  border-radius: 8px 8px 2px 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.list_section ul li .img_box {
+  background-image: url("https://i.pinimg.com/736x/0c/bf/e2/0cbfe2aabc48941cabc06e4dc4fa2081.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.list_section ul li .img2 {
+  background-image: url("https://i.pinimg.com/736x/8e/a8/2d/8ea82dbec83dacd73d29c4aae574b204.jpg");
+}
+
+.list_section ul li .img3 {
+  background-image: url("https://i.pinimg.com/736x/d0/da/f0/d0daf0f78cee356911d3799d19cdcb05.jpg");
+}
+
+.list_section ul li .img4 {
+  background-image: url("https://i.pinimg.com/736x/1f/02/5a/1f025a5ad6c64773e6e2f68bd454190d.jpg");
+}
+
+.list_section ul li:hover .details {
+  display: block;
+}
+
+.list_section ul li .details {
+  display: none;
+  padding: 40px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+}
+
+.list_section ul li .details::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
