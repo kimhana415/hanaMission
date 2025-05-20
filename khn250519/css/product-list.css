@@ -1,0 +1,250 @@
+@import url(common.css);
+
+.product-list {
+  width: calc(100% - 64px);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.list__box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.list__item {
+  width: calc(100% / 4);
+}
+
+/*____________________ 상품 이미지  */
+.list__item .product__img {
+  position: relative;
+  width: 285px;
+  height: 285px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+/* 썸네일 뱃지 */
+.thumbnail__badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  z-index: 1;
+}
+/* 썸네일 이미지 */
+.thumbnail__img {
+  width: 100%;
+  transition: all ease-in-out 0.1s;
+  transform: scale(1);
+}
+/* 호버시 이미지 확대 */
+.list__item:hover .thumbnail__img {
+  transform: scale(1.1);
+}
+/* 북마크 아이콘 */
+.icon__bookmark {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  opacity: 1;
+}
+/* 북마크 아이콘 호버 시 */
+.icon__bookmark:hover {
+  opacity: 0.5;
+}
+
+/*____________________ 상품 정보  */
+.product__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 0 0;
+}
+
+/*__________ 타이틀 박스 */
+.title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  
+}
+.title-box .brnad {
+  color: #666;
+  font-size: var(--font-size-sm);
+}
+.title-box .name {
+  font-size: var(--font-size-md);
+}
+.list__item:hover .name {
+  opacity: 0.5;
+}
+
+/*__________ 금액 박스 */
+.price-box {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+/* 퍼센트 */
+.price-box .percentage {
+  color: var(--color-primary);
+}
+
+/*__________ 리뷰 박스 */
+.review-box {
+  display: flex;
+  gap: 4px;
+  font-size: var(--font-size-sm);
+}
+/* 별 아이콘 */
+.review-box .bi-star-fill {
+  color: var(--color-primary);
+}
+/* 리뷰 개수 */
+.review-box .review-num{
+  color: #666;
+}
+
+/*__________ 오늘 출발 박스 */
+.today-box {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+/* 번개 아이콘 박스 */
+.today-box .icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background-color: #7a58ff;
+}
+/* 번개 아이콘 */
+.today-box .icon-box .bi-lightning-fill {
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+}
+/* 오늘 출발 텍스트 */
+.today-box .today__txt {
+  color: #7a58ff;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+/*__________ ~ 결제시 */
+.payment-time {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+/*__________ 뱃지 박스 */
+.badge-box>span{
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+/* 무료배송 */
+.badge-box .badge__free-shipping{
+  background-color: #eee;
+  color: #666;
+}
+/* 특가 */
+.badge-box .badge__special-priceg{
+  background-color: #ff7777;
+  color: var(--color-white);
+}
+
+/*__________ 결제할인 */
+.discount-box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  padding: 1px 6px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+/* 카드 아이콘 */
+.discount-box .bi-credit-card-fill {
+  line-height: 12px;
+  font-size: var(--font-size-sm);
+}
+/* ~~ 결제할인 텍스트 */
+.discount-box .discount-txt {
+  color: var(--color-black);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+/*____________________ 광고  */
+.ad {
+  position: relative;
+  background-color: #2f2b24;
+  border-radius: 4px;
+}
+
+/* 광고 이미지 */
+.ad .product__img {
+  border-radius: 4px 4px 0 0;
+}
+/* 광고 이미지 호버 효과 X */
+.ad:hover .thumbnail__img {
+  transform: scale(1);
+}
+
+/* 정보 */
+.ad .ad__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 40px 20px;
+  background-color: #2f2b24;
+  color: var(--color-white);
+}
+.ad .ad__info h3 {
+  font-size: var(--font-size-md);
+}
+.ad .ad__info h2 {
+  font-size: var(--font-size-lg);
+}
+.ad .ad__info p {
+  font-size: var(--font-size-md);
+  opacity: 0.8;
+}
+
+/* 아이콘 박스 */
+.ad .icon-box {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #504c45;
+  border-radius: 50%;
+}
+/* right 아이콘 */
+.ad .icon-box .bi-chevron-right {
+  font-size: var(--font-size-md);
+}
+
+/* layer */
+.ad .layer {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-white);
+  border: 4px solid #2f2b24;
+  border-radius: 50px;
+  font-weight: var(--font-weight-semibold);
+  transform: translateY(255px);
+}

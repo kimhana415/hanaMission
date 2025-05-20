@@ -1,0 +1,322 @@
+@import url(common.css);
+span {
+  display: inline-block;
+  line-height: 1;
+}
+
+.product-detail {
+  display: flex;
+  gap: 52px;
+  width: calc(100% - 64px);
+  max-width: 1156px;
+  margin: 20px auto;
+}
+/*____________________ 상품 상세 이미지  */
+.product-detail__gallery {
+  display: flex;
+  gap: 8px;
+}
+/*__________ 미리보기 */
+.gallery__thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* 미리보기 항목 */
+.gallery__thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+/* 선택된 이미지 */
+.gallery__thumb--active {
+  border: 2px solid var(--color-primary);
+}
+/* 좌측 미리보기 이미지 */
+.gallery__thumb>img {
+  width: 100%;
+    transform: scale(1);
+  transition: all ease-in-out 0.1s;
+}
+/* 좌측 미리보기 이미지 호버시*/
+.gallery__thumb:hover>img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*__________ 메인 이미지 */
+.gallery__main-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+/* only */
+.thumbnail__badges {
+  position: absolute;
+  top: 0;
+  right: 0;
+    width: 110px;
+}
+
+/* 이미지 */
+.gallery__image {
+  width: 560px;
+  height: 560px;
+}
+.gallery__image>img {
+  width: 100%;
+}
+
+/* 오늘의 딜 배너 */
+.deal-banner {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f77777;
+  color: var(--color-white);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+/* 호버 시 */
+.deal-banner:hover {
+  background-color: #f85d52;
+}
+.deal-banner__left, 
+.deal-banner__right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* 오늘의딜 텍스트 */
+.deal-banner__text {
+  color: #ffd9d9;
+}
+
+/*____________________ 상품 상세 정보  */
+.product-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/*__________ 브랜드명 */
+.info__brand {
+  color: #666;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+/*__________ 타이틀 */
+.info__title {
+  display: flex;
+  gap: 32px;
+}
+/* 타이틀 텍스트 */
+.title__text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 타이틀 버튼 박스*/
+.title__btn-box {
+  display: flex;
+  gap: 12px;
+}
+/* 스크랩 */
+.title__btn--scrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+.title__btn--scrap>svg {
+  fill: transparent;
+  stroke: #424242;
+  stroke-width: 1;
+}
+/* 공유하기 버튼 */
+.title__btn--share {
+  cursor: pointer;
+}
+
+/*__________ 리뷰 */
+.info__rating a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0 8px 0;
+}
+/* 별 */
+.rating__star {
+  display: flex;
+  gap: 1px;
+}
+/* 리뷰 개수 */
+.rating__count {
+  color: var(--color-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+/*__________ 금액 */
+.info__price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* 금액 상단 */
+.info__price-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* 퍼센트 */
+.price-top__percentage {
+  color: #666;
+}
+/* 정가 */
+.price-top__origin {
+  color: #bbb;
+  text-decoration: line-through;
+}
+/* 정보 버튼 */
+.price-top__btn--info {
+  cursor: pointer;
+}
+
+/* 금액 하단 */
+.info__price-boottom {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* 할인금액 */
+.price-boottom__discount {
+  color: var(--color-black);
+  font-size: var(--font-size-display);
+  font-weight: bold;
+}
+/* 원 */
+.price-boottom__won {
+  color: var(--color-black);
+  font-size: var(--font-size-xxl);
+}
+/* 특가 */
+.price-boottom__label--tag {
+  padding: 4px;
+  background-color: #ff7777;
+  color: var(--color-white);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+}
+/* 오늘 출발 */
+.price-boottom__label--fast {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+/* 번개 아이콘 */
+.price__label--fast-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  background-color: #7a58ff;
+}
+.bi-lightning-fill {
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+}
+/* 오늘 출발 텍스트 */
+.price__label--fast-txt{
+  color: #7a58ff;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+/*__________ 정보 상세 */
+.info__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0;
+  font-size: var(--font-size-md);
+}
+.info__detail>div {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+/* 상세 타이틀 */
+.detail__title {
+  color: #999;
+}
+/* 상세 내용 */
+.detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+/* 지금 주문시 내일 출발 */
+.delivery__tomorrow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 제주도/도서산간 지역 4,000원 */
+.delivery__add-charge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  color: #999;
+  font-size: var(--font-size-sm);
+}
+
+/* 배송 도착 예정 */
+.delivery__arrival {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f7f8fa;
+  border-radius: 4px;
+}
+/* 도착 예정 날짜 */
+.delivery__date {
+  flex: 1;
+}
+/* 도착 정보 버튼 */
+.delivery_btn--info {
+  cursor: pointer;
+}
+
+
+/* 텍스트 강조 */
+.text--active{
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+
+/* 호버시 */
+.info__brand:hover,
+.title__btn--scrap:hover,
+.title__btn--share:hover,
+.info__rating:hover,
+.promotion__payment:hover {
+  opacity: 0.5;
+}
