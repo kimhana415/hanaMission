@@ -178,6 +178,11 @@
   font-weight: var(--font-weight-semibold);
 }
 
+.icon__coupone {
+  width: 12px;
+}
+
+
 /*____________________ 광고  */
 .ad {
   position: relative;
