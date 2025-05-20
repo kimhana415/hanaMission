@@ -1,0 +1,105 @@
+/* 파일명: googleTest
+
+  1. 레이아웃 관련
+  display, position(top, right, bottom, left)
+  float / clear
+  z-index
+
+  2. 박스모델
+  width, height
+  margin, padding, box-sizing, overflow
+
+  3. 테두리와 배경
+  background, box-shadow
+  borders
+
+  4. 텍스트
+  font-~~, text-~~,...
+
+  5. 기타
+  cursor, animation, transform,...
+
+  정렬 -> 크기 주고 -> 박스 꾸미고 -> 글씨 넣고 -> 효과 마무리
+
+  자동으로 정렬 설정해주는 라이브러리
+  CSS Prettier, Stylelint
+  자바스크립트에서 코드 오류를 잡아주는 라이브러리
+  ESLint
+
+  BEM
+  block, element, modifier
+    - element -> 독립적인 컴포넌트 (div 한 단락!) main__title
+    - modifier -> 상태/스타일 변경 card__button--disabled
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main__title {
+  padding: 100px 0 44px 0;
+}
+.main__title strong {
+  font-size: 5rem;
+  letter-spacing: -5px;
+}
+.text__color--blue {
+  color: #4285f4;
+}
+.text__color--red {
+  color: #ea4335;
+}
+.text__color--yellow {
+  color: #fbbc05;
+}
+.text__color--green {
+  color: #34a853;
+}
+
+/* 검색 박스 */
+.main__search-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 20px;
+  margin: 0 auto;
+  width: 700px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 6px #ccc;
+}
+
+/* 검색 텍스트 박스 */
+.search__text-box {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  flex: 1;
+}
+/* 텍스트 박스 인풋 */
+.search__text-box input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
+/* 검색 버튼 박스 */
+.search__button-box {
+  display: flex;
+  gap: 12px;
+}
+/* 버튼 박스 아이콘 */
+.search__button-box i {
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
