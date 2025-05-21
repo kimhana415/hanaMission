@@ -1,0 +1,92 @@
+/* 250521khn-인스타그램 모달 */
+@import url(common.css);
+.wrap {
+  width: calc(100% - 64px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* 오버레이 */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+/* 모달 */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px 48px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+/* _____닫기 아이콘 박스 */
+.modal__icon__box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* _____내용 */
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 60px 40px;
+}
+.content__img {
+  margin: 0 0 8px 0;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.content__title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+}
+.content__desc {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+.content__policy {
+  color: #999;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.content__policy a {
+  color: #333;
+  font-weight: var(--font-weight-bold);
+}
+
+/* _____버튼 */
+.modal__btn__box {
+  display: flex;
+  flex-direction: column;
+}
+/* 버튼 공통 */
+.modal__btn__box button {
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-semibold);
+}
+/* 가입하기 */
+.btn__box--join {
+  background-color: #0095f6;
+  color: var(--color-white);
+}
+/* 로그인 */
+.btn__box--login {
+  color: #0095f6;
+}
+
+.hidden {
+  display: none;
+}
