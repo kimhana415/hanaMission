@@ -1,0 +1,255 @@
+/* 파일명 coupang.css */
+@import url(common.css);
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  height: 100vh;
+}
+
+.cart-box {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cart-box span {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+/* ---------- 장바구니 리스트 */
+.cart-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.global__delivery,
+.rocket__delivery {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* ---------- 상품 타이틀*/
+.delivery__title__box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.delivery__title {
+  font-size: var(--font-size-lg);
+}
+
+.delivery__desc {
+  font-size: var(--font-size-sm);
+}
+.delivery__desc>span {
+  font-size: var(--font-size-sm);
+}
+
+/* ---------- 상품 정보*/
+.delivery__product {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+/* 상품 왼쪽 */
+.delivery__product__left {
+  display: flex;
+  gap: 10px;
+}
+/* 체크박스 */
+.product__checkbox {
+  transform: scale(1.2);
+}
+
+
+/* 상품 오른쪽 */
+.delivery__product__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+/* 타이틀 박스 */
+.product__title__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-size: var(--font-size-md);
+}
+/* 상품명 */
+.product__title {
+  word-break: keep-all;
+}
+/* 삭제 버튼 */
+.product__delete__btn {
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+/* 배송 예정 */
+.product__delivery-date {
+  color: #008c00;
+  font-size: var(--font-size-sm);
+}
+/* 금액 박스 */
+.product__price_box {
+  display: flex;
+  flex-direction: column;
+}
+.product__discount__box {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* 할인 뱃지 */
+.product__discount-badge {
+  padding: 0 2px;
+  color: var(--color-white);
+  background-color: #e12705;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+/* 정가 */
+.product__price--original {
+  color: #999;
+  font-size: var(--font-size-md);
+  text-decoration: line-through;
+}
+/* 상품 금액 */
+.product__price {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+/* 로켓직구 */
+.product__delivery-badge {
+  width: 70px;
+}
+
+
+/* 포인트 적립 */
+.product__point {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: var(--font-size-sm);
+}
+.product__point__icon {
+  width: 14px;
+}
+
+.product__quantity__box {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.product__quantity__box>button {
+  width: 24px;
+  height: 24px;
+  font-size: var(--font-size-xl);
+  color: #666;
+}
+
+.quantity__input {
+  width: 60px;
+  text-align: center;
+}
+
+/* ---------- 상품 총 금액*/
+.product__total__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 0;
+  background-color: #f9fafb;
+  font-size: var(--font-size-sm);
+}
+.product__total__price span {
+  font-size: var(--font-size-md);
+}
+.total__price span:first-child{
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+.product__add {
+  color: #0073e9;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+
+
+/* ---------- 주문 예상 금액 정보*/
+.cart-right {
+  position: sticky;
+  top: 20px;
+  width: 300px;
+}
+
+.cart__order__price__box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* ----- 주문 예상 금액 타이틀*/
+.order__price__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ----- 주문 정보 박스 */
+.order__info__box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: var(--font-size-md);
+}
+.order__info__price__item {
+  display: flex;
+  justify-content: space-between;
+}
+.total__discount {
+  color: #cb1400;
+}
+
+/* ----- 총 금액 */
+.cart-right .order__total__price {
+  text-align: right;
+} 
+.cart-right .order__total__price>span{
+  font-size: var(--font-size-xl);
+} 
+
+/* ----- 구매하기 버튼 */
+.order__btn {
+  padding: 10px 0px;
+  color: var(--color-white);
+  background-color: #346aff;
+  border-radius: 4px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
