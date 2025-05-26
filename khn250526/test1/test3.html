@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 3</title>
+</head>
+
+<body>
+  <!--
+  3: input에 입력된 값을 div 안에 실시간으로 박스 형태로 추가하라
+  설명
+  input에 입력하고 버튼을 누르면
+  입력된 텍스트가 <div class="tag">내용</div> 형식으로 계속 추가됨
+-->
+  <h3>input 값 div에 추가</h3>
+
+  <input type="text">
+
+  <button id="btn">추가</button>
+
+  <div class="tag-box"></div>
+
+  <script>
+    // 버튼 찾기
+    let btn = document.getElementById('btn');
+
+    // 버튼 클릭 시
+    btn.addEventListener('click', function () {
+      // 인풋 찾기
+      let inputTag = document.getElementsByTagName('input');
+      // 인풋 값
+      let inputValue = inputTag[0].value;
+      console.log(inputValue);
+
+
+      if (inputValue !== "") { //빈 값이 아니면
+        // div 생성
+        let divTag = document.createElement('div');
+        // divTag에 input 값 입력
+        divTag.innerText = inputValue;
+        divTag.className = "tag";
+
+        // tag-box 찾기a
+        let tagBox = document.getElementsByClassName('tag-box')[0];
+
+        // tagBox 자식인  divTag에 추가
+        tagBox.appendChild(divTag);
+
+        // 입력 초기화
+        document.getElementsByTagName('input')[0].value = '';
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문제 2</title>
+</head>
+
+<body>
+  <!--
+  문제 2: 색상 목록을 ul 태그에 li로 출력하라
+  설명
+  ['빨강', '노랑', '파랑'] 배열을 기반으로
+  <ul> 안에 <li> 태그 3개가 자동으로 생성되게 하세요
+-->
+
+  <h3>색상 목록</h3>
+
+  <ul id="colorBox">
+
+  </ul>
+
+  <script>
+    let colorList = ['빨강', '노랑', '파랑'];
+
+    // li 생성
+    let colorItem1 = document.createElement('li');
+    let colorItem2 = document.createElement('li');
+    let colorItem3 = document.createElement('li');
+
+    // 내용 넣기
+    colorItem1.innerText = colorList[0];
+    colorItem2.innerText = colorList[1];
+    colorItem3.innerText = colorList[2];
+
+    let colorBox = document.getElementById('colorBox');
+    console.log(colorBox);
+
+    colorBox.appendChild(colorItem1);
+    colorBox.appendChild(colorItem2);
+    colorBox.appendChild(colorItem3);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+/* 파일명 250523khn-cascadia.css */
+@import url(common.css);
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #493728;
+}
+
+/* -------------------- 헤더 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fbf6ec;
+  z-index: 1;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 유틸 항목들 */
+.header__util__items {
+  display: flex;
+  gap: 20px;
+}
+
+/* 텍스트 */
+.header__util__item a {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 텍스트 호버 시 */
+.header__util__item a:hover {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 예약하기 */
+.util_reservation {
+  padding: 4px 16px;
+  border: 1px solid #333;
+}
+
+/* 로고 */
+.header__logo {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 햄버거 메뉴 */
+.header__btn {}
+
+
+/* -------------------- 메인 */
+main {
+  background-color: #fbf6ec;
+}
+
+.contanier {
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 126px 0 0 0;
+}
+
+/* 탭 항목들 */
+.tab__items {
+  display: flex;
+  text-align: center;
+}
+
+/* 탭 항목 */
+.tab__item {
+  flex: 1;
+  color: #8e7d6f;
+  font-size: var(--font-size-md);
+  border-top: 1px solid #d3cbc0;
+  transition: all ease-in-out 0.2s;
+}
+
+/* 선택된 탭 */
+.tab__item.on {
+  border-top: 1px solid #493728;
+  color: #493728;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 탭 텍스트 */
+.tab__item a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+}
+
+/* 탭 텍스트 */
+.tab__item:hover {
+  border-top: 1px solid #493728;
+  box-sizing: border-box;
+  color: #493728;
+  font-weight: var(--font-weight-semibold);
+}
+
+.tab__content {
+  display: none;
+}
+
+.tab__content--active {
+  display: block;
+}
+
+/* -------------------- 로그인 */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0;
+}
+
+/* 타이틀 박스 */
+.page__title__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 타이틀 */
+.page__title {
+  font-size: var(--font-size-xxl);
+}
+
+/* 인풋 폼 */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 500px;
+}
+
+/* 인풋박스 */
+.login__input__box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 인풋 */
+.login__input__box>input {
+  padding: 16px 20px;
+  background-color: var(--color-white);
+  font-size: var(--font-size-sm);
+}
+
+/* 인풋 플레이스홀더 */
+.login__input__box>input::placeholder {
+  color: #8e7d6f;
+}
+
+/* 인풋 클릭 시 */
+.login__input__box>input:focus {
+  outline: 1px solid #d3cbc0;
+}
+
+/* 아이디 저장 */
+.login__id__save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-sm);
+}
+
+/* 체크박스 */
+.login__id__save>input {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.login__id__save>label {
+  cursor: pointer;
+}
+
+/* 로그인 버튼 */
+.login__btn {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #493728;
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* -------------------- 아이디 비번 찾기 */
+
+
+/* -------------------- 푸터 */
+footer {
+  background-color: var(--color-white);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
+}
+
+/* 푸터 좌측 */
+.footer__left {
+  display: flex;
+  gap: 160px;
+  font-size: var(--font-size-xs);
+}
+
+/* 회사 정보 */
+.company__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 정책 항목들 */
+.policy__items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 푸터 우측 */
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+}
+
+/* sns */
+.footer__sns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* sns 박스*/
+.footer__sns__box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__sns__box>img {
+  width: 24px;
+  height: auto;
+}
+
+/* 푸터 로고 */
+.footer__logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 3px;
+}
