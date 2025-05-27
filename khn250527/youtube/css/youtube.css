@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* 16:9 비율 → (9/16)*100 */
+  height: 0
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.add-comment {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+/* 이미지 박스 */
+.img-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+/* 이미지 */
+.img-box img {
+  width: 100%;
+}
+
+/* 인풋 박스 */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+/* 인풋 */
+.input-box input {
+  width: 100%;
+  padding: 4px 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  outline: none;
+
+}
+
+input:focus {
+  border-bottom: 1px solid #333;
+}
+
+/* 버튼 박스 */
+.btn-box {
+  display: none;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.left:hover {
+  background-color: #eee;
+}
+
+.left>p {
+  width: 25px;
+  height: 25px;
+  background-color: aquamarine;
+  border-radius: 50px;
+}
+
+.right {
+  display: flex;
+  gap: 8px;
+}
+
+/* 버튼 공통 */
+.right button {
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 취소 버튼 */
+#btn-cancel {
+  background-color: #fff;
+}
+
+#btn-cancel:hover {
+  background-color: #eee;
+}
+
+/* 댓글 버튼 */
+#btn-save {
+  background-color: #065fd4;
+  color: #fff;
+}
+
+#btn-save:disabled {
+  background-color: #eee;
+  color: #666;
+  cursor: default;
+}
+
+#comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+li {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  list-style: none;
+}
