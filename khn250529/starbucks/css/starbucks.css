@@ -1,0 +1,111 @@
+@import url(common.css);
+
+body {
+  background-color: #eee;
+  height: 1000px;
+  color: #666;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 0 0 0;
+  background-color: #f6f5ef;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ----------유틸 */
+.util {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.util__list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.util__item {
+  font-size: 13px;
+}
+
+.util__item:hover {
+  text-decoration: underline;
+}
+
+.util__item:not(:first-of-type)::before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  margin: 0 12px;
+  background-color: #ccc;
+}
+
+.btn__search {
+  padding: 4px 6px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* ----------메인 메뉴 */
+.gnb {
+  margin: 20px 0 0 0;
+  /* width: 800px; */
+}
+
+.gnb__list {
+  display: flex;
+  /* justify-content: flex-end; */
+}
+
+.gnb__item {
+  font-size: 14px;
+  padding: 8px 20px 30px 20px;
+  cursor: pointer;
+}
+
+.gnb__item:hover {
+  background-color: #333;
+
+}
+
+.gnb__item:hover a {
+  color: #1f9c4f;
+  text-decoration: underline;
+}
+
+.gnb__sub {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+}
+
+.gnb__sub__inner {
+  display: flex;
+  gap: 140px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.sub__title {
+  margin-bottom: 12px;
+  color: #fff;
+}

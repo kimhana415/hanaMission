@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery.html</title>
+  <style>
+    h3 {
+      padding-top: 20px;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      max-width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 20px;
+    }
+
+    .cancel-btn {
+      margin: 12px 0 0 0;
+      padding: 8px 20px;
+      color: #fff;
+      background-color: rgb(250, 70, 70);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h3>1. 이미지 숨기기/보이기</h3>
+    <button class="fade-btn">이미지 숨기기/보이기</button>
+    <img class="fade-img" src="https://t1.daumcdn.net/cfile/tistory/99DBEB355BD3E7A31D" alt="라이언">
+  </div>
+
+  <div>
+    <h3>2. 마우스가 버튼에 올라가면 텍스트 글씨 쓰기</h3>
+    <button class="btn">이벤트 확인 버튼</button>
+    <div class="text"></div>
+  </div>
+
+  <div>
+    <h3>3. 슬라이드 접었다 폈다.</h3>
+    <button class="slide-btn">이미지 슬라이드</button>
+    <img class="slide-img" src="https://t1.daumcdn.net/cfile/tistory/99DBEB355BD3E7A31D" alt="라이언">
+  </div>
+
+  <div>
+    <h3>4. 버튼 4개 만들어서 배경색 바꾸기!</h3>
+    <button class="bg-btn">노랑</button>
+    <button class="bg-btn">빨강</button>
+    <button class="bg-btn">파랑</button>
+    <button class="bg-btn">초록</button>
+  </div>
+
+  <div>
+    <h3>5. 선택</h3>
+    <button class="login">로그인</button>
+    <div class="modal">
+      <div class="modal-box">
+        <p class="text2">로그인하세요</p>
+        <button class="cancel-btn">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery.js"></script>
+
+  <!-- key_event2.html -->
+  <input id="enterInput" placeholder="엔터를 눌러보세요">
+
+  <script>
+    $('#enterInput').on('keydown', function (e) {
+      if (e.which === 13) { // 누른 키의 코드값 (Enter > 13)
+        alert("✅ 엔터 키를 눌렀습니다!");
+      }
+    });
+    /*
+    e.which
+    누른 키 코드값 의미(숫자 형태로 반환됨)
+
+    예:
+    Enter → 13
+    Esc → 27
+    Space → 32
+    ↑ → 38
+    ↓ → 40
+    A → 65
+    Z → 90
+
+    e.which, e.key, e.code
+    e.which
+      - 비표준. jQuery에서 주로 사용. 최신 JS에선 잘 안 씀 (Enter > 13)
+    e.key
+      - 사용자 입력 기준 (Enter > "Enter" / A > "a" or "A")
+    e.code
+      - 위치 고정, 한/영 바꿔도 동일 (Enter > "Enter" / A > "KeyA")
+    */
+  </script>
+</body>
+
+</html>
