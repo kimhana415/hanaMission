@@ -1,0 +1,63 @@
+section {
+  padding: 1.5rem;
+  margin: 1.5rem;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+div {
+  position: relative;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.show-text {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
+}
+
+.view-text {
+  width: auto;
+  height: auto;
+}
+
+.view-text p {
+  opacity: 0;
+  margin: 0;
+}
+
+.change-box {
+  background-color: lightpink;
+}
+
+.pop-box {
+  background-color: lightgreen;
+}
+
+.main-bar {
+  width: 100%;
+  height: 30px;
+  border: 1px solid pink;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bar {
+  width: 10px;
+  height: 100%;
+  line-height: 30px;
+  margin: 0;
+  background-color: lightpink;
+  font-weight: 600;
+  text-align: center;
+}
