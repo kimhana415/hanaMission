@@ -9,7 +9,7 @@ $(".gnb__item").on({
 });
 
 // 메인 비주얼
-const fadeInSelectors = [
+const visualItems = [
   ".main__visual__slogan",
   ".drink1",
   ".drink2",
@@ -17,8 +17,8 @@ const fadeInSelectors = [
   ".btn__slogan"
 ];
 
-fadeInSelectors.forEach((selector, i) => {
-  const el = document.querySelector(selector);
+visualItems.forEach((item, i) => {
+  const el = document.querySelector(item);
   if (el) {
     setTimeout(() => {
       el.style.opacity = 1;
