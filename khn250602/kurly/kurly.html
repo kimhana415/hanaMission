@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마켓컬리</title>
+  <link rel="stylesheet" href="css/kurly.css">
+</head>
+
+<body>
+  <section>
+    <!-- 텍스트 박스 -->
+    <div class="title__box">
+      <h2>⚡단 하루, 반짝특가 랭킹</h2>
+      <p>24시간 한정 최대 혜택 놓치지 마세요!</p>
+    </div>
+
+    <!-- 시간 -->
+    <div class="timer__box">
+      <dotlottie-player src="https://lottie.host/e9658214-bb04-44f3-9305-8470b25bec3f/0ueuHpLJgr.lottie"
+        background="transparent" speed="1" style="width: 24px; height: 24px" loop autoplay></dotlottie-player>
+      <div id="timer">00 : 00 : 00</div>
+    </div>
+
+    <!-- 상품 -->
+    <div class="product__list">
+      <ul id="product-items"></ul>
+    </div>
+
+    <!-- 전체보기 버튼 -->
+    <a href="#" class="btn__all-view">
+      <span>전체보기</span>
+      <img src="img/icon_arrow.svg" alt="전체보기">
+    </a>
+
+  </section>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="js/kurly.js"></script>
+</body>
+
+</html>
