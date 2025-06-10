@@ -1,0 +1,109 @@
+.article-list {
+  width: calc(100% - 80px);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ---------- 아티클 콘텐츠 박스 */
+.article-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+}
+
+.content {
+  color: #666;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+/* ---------- 프로필 헤더 */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-img-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-pill);
+  overflow: hidden;
+}
+
+.profile-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.time {
+  font-size: var(--font-size-sm);
+  color: #999;
+}
+
+
+/* ---------- 아티클 메타 */
+.article-meta-box {
+  display: flex;
+  gap: 12px;
+  font-size: var(--font-size-md);
+  color: #999;
+}
+
+
+
+/* ---------- 아티클 이미지 */
+.article-img-box {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.article-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-plus {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0px 8px;
+  color: var(--color-white);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-light);
+  background-color: rgba(0, 0, 0, 0.5);
+}
