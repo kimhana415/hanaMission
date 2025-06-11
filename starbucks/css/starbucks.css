@@ -128,13 +128,39 @@ header {
   margin: 120px 0 0 0;
 }
 
+/* 버튼 공통 */
+.btn {
+  display: inline-block;
+  height: 38px;
+  text-align: center;
+}
+
+.btn a {
+  display: block;
+  min-width: 130px;
+  height: 100%;
+  line-height: 34px;
+  border-radius: 4px;
+  transition: all ease-in-out 0.5s;
+}
+
+.btn a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 섹션 공통 */
+section {
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
 /* ----------메인 비주얼*/
 .main__visual {
   background-image: url("../img/top_bg.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
   background-size: 100%;
-  height: 33vw;
+  height: 31.95vw;
 }
 
 .main__visual img {
@@ -161,54 +187,159 @@ header {
   top: 60%;
   left: 10%;
   width: 26%;
-  height: 38px;
-  text-align: center;
   opacity: 0;
   transition: all ease-in-out 0.5s;
 }
 
 .btn__slogan a {
-  display: block;
   width: 25%;
-  min-width: 130px;
-  height: 100%;
-  line-height: 34px;
   margin: 0 auto;
   color: #f29440;
   border: 2px solid #f29440;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: all ease-in-out 0.5s;
 }
 
 .btn__slogan a:hover {
   background-color: #f29440;
-  color: #fff;
-  text-decoration: underline;
 }
 
 .main__visual__drink {
   position: absolute;
   transition: all ease-in-out 0.5s;
+  opacity: 0;
 }
 
 .drink1 {
   top: 18%;
   left: 52%;
   width: 19%;
-  opacity: 0;
+
 }
 
 .drink2 {
   top: 15%;
   left: 41%;
   width: 17%;
-  opacity: 0;
 }
 
 .drink3 {
   top: 19%;
   left: 63%;
   width: 19%;
-  opacity: 0;
+}
+
+
+
+
+
+
+
+/* ----------메인 빈*/
+.main__bean {
+  background-image: url("../img/promotion_bg.png");
+  background-size: cover;
+  height: 578px;
+}
+
+
+/* ----------메인 리저브*/
+.main__reserve {
+  background-image: url("../img/reserve_bg.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+
+
+/* ----------메인 매거진*/
+.main__magazine {
+  background-image: url("../img/magazine_bg.png");
+  background-size: cover;
+  height: 400px;
+}
+
+
+
+
+/* ----------메인 스토어*/
+.main__store {
+  background-image: url("../img/store_bg.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+.main__store__inner {
+  position: relative;
+  max-width: 1220px;
+  height: 100%;
+  margin: auto;
+}
+
+.main__store__exp {
+  position: absolute;
+  transition: all ease-in-out 0.5s;
+}
+
+.exp1 {
+  top: 0;
+  left: 130px;
+}
+
+.exp2 {
+  bottom: 15px;
+  left: 360px;
+}
+
+.exp3 {
+  top: -60px;
+  left: 500px;
+}
+
+.exp4 {
+  bottom: -8px;
+  right: 0;
+}
+
+.main__store__right {
+  position: absolute;
+  right: 130px;
+  top: 90px;
+  color: #333;
+
+  letter-spacing: -1px;
+}
+
+.main__store__right h3 {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-normal);
+}
+
+.main__store__right h4 {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-medium);
+}
+
+.main__store__right p {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+}
+
+.main__store__text-box__content {
+  margin: 6px 0;
+}
+
+.btn__find-store {
+  margin: 28px 0 0 0;
+}
+
+.btn__find-store a {
+  border: 2px solid #333;
+}
+
+.btn__find-store a:hover {
+  background-color: #333;
+}
+
+footer {
+  height: 1000px;
+  background-color: #ccc;
 }
