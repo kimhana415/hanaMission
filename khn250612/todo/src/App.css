@@ -1,0 +1,127 @@
+body {
+  background-color: #666;
+}
+
+.todo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ----------todo__tabs */
+.todo_tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 12px;
+  background-color: #f5f5f5;
+}
+
+
+.nav-link {
+  color: #f16e03;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .show>.nav-link {
+  color: #f16e03;
+  border-bottom-color: #000;
+}
+
+.nav-underline .nav-link:hover {
+  color: #f16e03;
+  border-bottom-color: #000;
+}
+
+/* ----------todo__list */
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 20px 12px;
+  background-color: #fff;
+}
+
+.todo__list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff8f3;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.todo__list__item:hover {
+  background-color: #ffede0;
+}
+
+.todo__list__item__left {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.todo__list__item__checkbox {
+  width: 16px;
+  height: 16px;
+  outline: none;
+}
+
+.todo__list__item__title {
+  flex: 1;
+  font-size: 18px;
+}
+
+.todo__list__item__btn-delete {}
+
+/* ----------todo__add */
+.todo__add {
+  display: flex;
+  padding: 16px 12px;
+  background-color: #f5f5f5;
+}
+
+.form-control {
+  border: none;
+  border-radius: 8px 0 0 8px;
+  outline: 0;
+}
+
+.form-control::placeholder {
+  color: #777;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.btn {
+  padding: 4px 20px;
+  color: #fff;
+  background-color: #f16e03;
+  border: 1px solid #f16e03;
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #f16e03;
+  border: 1px solid #f16e03;
+  opacity: 0.9;
+}
