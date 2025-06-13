@@ -19,41 +19,86 @@
 
 4. 글 올리고 나서 html화면에 그리기!
 */
-
-const postBtn = document.getElementById('btnPost'); // 글 올리기
-const deleteBtn = document.getElementById('btnDelete'); // 글 삭제
 const boardTitle = document.getElementById('title'); // 타이틀
 const boardContent = document.getElementById('content'); // 컨텐츠
+const postBtn = document.getElementById('btnPost'); // 글 올리기
+const deleteBtn = document.getElementById('btnDelete'); // 글 삭제
 const postList = document.getElementById('postList'); // 게시판 리스트
 const noPosts = document.getElementById('noPosts'); // 등록된 글 없을 때
 
-let boardList = [
-  {
-    id: "id",
-    title: '',
-    content: '',
-    createDate: new Date()
-  }
-];
+let boardList = [];
+let counterId = 1;
+
 
 // 글 올리기 함수
 function boardPost() {
+  const title = boardTitle.value;
+  const content = boardContent.value;
 
+  // 이 코드 안쓰니까 날짜만 출력됨
+  if (!title || !content) {
+    alert('모두 입력해주세요.')
+    return;
+  }
+
+  const newPost = {
+    id: counterId++,
+    title: title,
+    content: content,
+    createDate: new Date()
+  };
+
+  boardList.push(newPost); // 스택에 추가
+  renderPosts(); // 화면에 다시 그리기
+
+  boardTitle.value = '';
+  boardContent.value = '';
 }
+
 
 // 글 올리기 클릭했을 때
 postBtn.addEventListener('click', function () {
-  if (boardList.values) {
-    boardPost(boardList.values);
-  };
   console.log("글 올리기");
+  boardPost();
 });
+
 
 // 글 삭제 클릭했을 떄
 deleteBtn.addEventListener('click', function () {
+  console.log("글 삭제");
   if (boardList.length === 0) {
     alert("삭제할 글이 없습니다.");
     return;
-  };
-  console.log("글 삭제");
+  }
+
+  const removed = boardList.pop(); // 원본 배열에서 마지막 글 삭제
+  renderPosts(); // 삭제한 글 빼고 다시 그리기
+
+  alert(`가장 최근 글을 삭제했습니다.\n제목:${removed.title}`);
 });
+
+// 위에서 추가한 내용을 html에 스택 쌓는 명령을 구현하는 함수
+function renderPosts() {
+  postList.innerHTML = '';  // 안썼더니 글올리기 클릭 할때마다 중복으로 생김
+
+  if (boardList.length === 0) {
+    noPosts.style.display = "block";
+    return;
+  }
+
+  noPosts.style.display = "none";
+
+  [...boardList].reverse().forEach((post) => {
+    const postItem = document.createElement('div');
+
+    postItem.className = 'post-item';
+    postItem.innerHTML = `
+    <h5>${post.title}</h5>
+    <div>${post.content}</div>
+    <div>${post.createDate.toLocaleString()}</div>
+  `;
+
+    postList.appendChild(postItem);
+  })
+
+}
