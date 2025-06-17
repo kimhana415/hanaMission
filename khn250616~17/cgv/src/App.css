@@ -1,0 +1,326 @@
+.movie-view,
+.movie-detail {
+  width: calc(100% - 80px);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 3px solid #333;
+}
+
+.title h2 {
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+}
+
+.submenu ul {
+  display: flex;
+  gap: 16px;
+}
+
+.submenu ul li {
+  cursor: pointer;
+}
+
+.submenu ul li {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-semibold);
+  color: #666;
+}
+
+.submenu ul li::before {
+  margin: 0 4px 0 0;
+  opacity: 0;
+  content: "▶";
+}
+
+.submenu ul li.on {
+  color: #fb4357;
+}
+
+.submenu ul li.on::before {
+  opacity: 1;
+
+}
+
+.submenu ul li:hover {
+  color: #fb4357;
+}
+
+.submenu ul li:hover::before {
+  margin: 0 4px 0 0;
+  opacity: 1;
+  content: "▶";
+}
+
+
+.sorting {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 30px 0;
+}
+
+.nowshow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.nowshow label {
+  font-size: var(--font-size-14);
+}
+
+.sorting__right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+select {
+  line-height: 27px;
+  height: 29px;
+  padding: 3px 5px;
+  border: 1px solid #b4b3aa;
+  font-size: var(--font-size-14);
+}
+
+button {
+  line-height: 23px;
+  padding: 0 5px 0;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sorting__btn-go {
+  border: 2px solid #7b7b7b;
+  color: #7b7b7b;
+}
+
+
+.movie-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% / 4 - 45px);
+}
+
+/* ---------- 이미지 */
+.movie-img-box {
+  position: relative;
+}
+
+.age-limit {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #0fa70f;
+  color: #fff;
+  border-radius: 4px;
+  font-size: var(--font-size-14);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.age-limit-12 {
+  background-color: #e6c300;
+}
+
+.age-limit-15 {
+  background-color: #f88909;
+}
+
+.age-limit-19 {
+  background-color: #e00000;
+}
+
+.movie__img {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.movie__rank {
+  background-color: #333;
+  color: #fff;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+}
+
+.movie__rank--high {
+  background-color: #fb4357;
+}
+
+.movie-img-box .movie-img {
+  width: 100%;
+}
+
+.movie__rank.best {
+  background-color: #fb4357;
+}
+
+/* ---------- 콘텐츠 */
+.movie__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie__name {
+  font-weight: var(--font-weight-semibold);
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-14);
+}
+
+.percent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.percent-txt {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.egg-gage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.egg-gage::before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  margin: 0 4px 0 8px;
+  background-color: #ccc;
+}
+
+.egg {
+  display: inline-block;
+  margin-right: 2px;
+  width: 18px;
+  height: 26px;
+  vertical-align: middle;
+  background: url(https://img.cgv.co.kr/R2014/images/sprite/sprite_egg.png) no-repeat 0 -47px;
+  width: 16px;
+  background-position: -41px -47px;
+}
+
+.open-date {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+  color: #666;
+}
+
+.btn-reservation {
+  line-height: 24px;
+  padding: 0 24px;
+  margin: 8px 0 0 0;
+  background-color: #fb4357;
+  color: #fff;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+  border-radius: 4px;
+}
+
+
+
+
+.movie-detail {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+}
+
+.movie-img {
+  width: 185px;
+  height: 260px;
+}
+
+.movie-info-title-box {
+  padding: 0 0 20px 0;
+}
+
+.movie-info-title-top {
+  display: flex;
+  gap: 20px;
+}
+
+.movie-info-title-top h2 {
+  line-height: 1.2;
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-medium);
+}
+
+.btn-now-show {
+  padding: 0 5px 0;
+  line-height: 23px;
+  color: #3e82a4;
+  border: 2px solid #3e82a4;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.movie-info-title-sub {
+  line-height: 1;
+  color: #666;
+  font-size: var(--font-size-12);
+}
+
+.movie-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px 0;
+  margin: 12px 0 0 0;
+  border-top: 1px solid #ccc;
+}
+
+.movie-info-text>p {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-box {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-egg {
+  line-height: 24px;
+  padding: 4px 24px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: var(--font-size-14);
+}
+
+.btn-box .btn-reservation {
+  line-height: 32px;
+  margin: 0;
+  font-size: var(--font-size-14);
+}
