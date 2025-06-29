@@ -1,0 +1,190 @@
+:root {
+  background-color: #e7efff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+/* 게시물 */
+.board,
+.timer,
+.entrylist,
+.levelup {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 타이머 */
+.timer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.timer-box {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background-color: #f5f5f5;
+}
+
+.timer-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.btn-box {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-box button {
+  padding: 8px 20px;
+  background-color: #787aff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 입장명단 */
+.entrylist_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-box {
+  display: flex;
+  gap: 8px;
+}
+
+.input-box input {
+  flex: 1;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid #ccc;
+}
+
+.input-box button {
+  padding: 12px 40px;
+  background-color: #787aff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #eee;
+  border-radius: 12px;
+}
+
+.icon-close {
+  cursor: pointer;
+}
+
+/* 레벨업 */
+.levelup-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 20px;
+}
+
+.exp-up-btn {
+  padding: 8px 16px;
+  background-color: #787aff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.exp-up-btn:disabled {
+  background-color: #eee;
+}
+
+.msg {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #ff3b3b;
+}
