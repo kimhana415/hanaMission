@@ -1,0 +1,32 @@
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.scroll-section {
+  height: 2000px;
+  background-color: #ccc;
+  overflow-y: auto;
+}
+
+.carousel {
+  display: flex;
+  width: 200px;
+  overflow-x: auto;
+}
+
+.img-box {
+  width: 200px;
+  min-width: 100%;
+}
+
+.img {
+  width: 100%;
+}
