@@ -1,0 +1,39 @@
+.input_text {
+  border: 2px solid lightblue;
+}
+
+#table {
+  border: 1px solid #eee;
+}
+
+th {
+  background-color: #eee;
+}
+
+input[type=radio]:checked+label {
+  color: blue;
+}
+
+button:enabled {
+  background-color: #ca5b5b;
+}
+
+button:disabled {
+  background-color: #eee;
+}
+
+.parent>p {
+  color: red;
+}
+
+.display .none {
+  display: none;
+}
+
+.display .block {
+  display: block;
+}
+
+.display .inline {
+  display: inline;
+}

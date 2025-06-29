@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/CSS1</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="test.css">
+  <style>
+    nav {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <header style="color: blueviolet;">헤더</header>
+  <nav>네비게이션</nav>
+  <main>
+    메인 콘텐츠
+    <form>
+      <input type="text" placeholder="텍스트입력" class="input_text">
+      <br />
+
+      <input type="checkbox" name="checkbox" id="checkbox1">
+      <label for="checkbox1">체크박스 1</label>
+      <input type="checkbox" name="checkbox" id="checkbox2">
+      <label for="checkbox2">체크박스 2</label>
+      <br />
+
+      <input type="radio" name="radio" id="radio1" checked>
+      <label for="radio1">라디오 1</label>
+      <input type="radio" name="radio" id="radio2">
+      <label for="radio2">라디오 2</label>
+      <br />
+
+      <select>
+        <option>1</option>
+        <option selected>2</option>
+        <option>3</option>
+      </select>
+      <br />
+
+      <button type="button">활성화</button>
+      <button type="button" disabled>비활성화</button>
+    </form>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>1</th>
+          <td>1</td>
+          <th>2</th>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th colspan="2">1</th>
+          <td colspan="2">1</td>
+        </tr>
+    </table>
+
+    <div class="parent">
+      <p>자손 선택자 이해하기</p>
+      <div>
+        <p>자손 선택자 이해하기 자손 선택자 이해하기</p>
+      </div>
+    </div>
+
+    <div class="display">
+      <p class="block">block</p>
+      <p class="inline">inline</p>
+      <p class="inline">inline</p>
+    </div>
+  </main>
+  <footer>푸터</footer>
+</body>
+
+</html>
+<!--
+쿠팡 시멘틱 태그
+article, section, footer 사용함
+-->
