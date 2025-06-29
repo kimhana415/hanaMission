@@ -40,9 +40,7 @@ export default function Department() {
           type='text'
           placeholder='학과 입력'
           onChange={e => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') handleSearch();
-          }}
+          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
         />
         <button onClick={handleSearch}>찾기</button>
       </div>
