@@ -55,19 +55,6 @@ export default function City() {
           </div>
         )
       }
-
-      {/* <div>
-        <span>{input}에서 연결된 도시:</span>
-        <div style={{ display: "flex" }}>
-          {
-            connected.map((city, i) => (
-              <div
-                key={i}
-              >{city}</div>
-            ))
-          }
-        </div>
-      </div> */}
     </div>
   )
 }
