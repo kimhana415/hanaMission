@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day8</title>
+</head>
+
+<body>
+  <h1>📘 Day8: 배열 탐색과 반복문 (for + 조건)</h1>
+</body>
+<script>
+  // 1. 점수 배열 `[50, 90, 77, 85, 60]`에서 80점 이상만 출력하세요
+  const scores = [50, 90, 77, 85, 60];
+  for (i = 0; i < scores.length; i++) {
+    if (scores[i] >= 80) {
+      console.log(scores[i]);
+    }
+  }
+
+
+  // 2. `["apple", "banana", "kiwi"]` 중 글자 수가 5 이상인 과일만 출력하세요
+  const fruits = ["apple", "banana", "kiwi"];
+  for (i = 0; i < fruits.length; i++) {
+    if (fruits[i].length >= 5) {
+      console.log(fruits[i]);
+    }
+  }
+
+
+  // 3. 숫자 배열 `[2, 5, 8, 11, 14]` 중 짝수만 출력하세요
+  const numbers = [2, 5, 8, 11, 14];
+  for (i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      console.log(numbers[i]);
+    }
+  }
+</script>
+
+</html>

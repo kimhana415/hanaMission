@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day10</title>
+</head>
+
+<body>
+  <h1>📘 Day10: Map 자료형</h1>
+</body>
+<script>
+  // 1. `Map`에 `"food" : "피자"`와 `"price" : 15000`을 저장하고 출력하세요
+  const map = new Map();
+  map.set("food", "피자");
+  map.set("price", 15000);
+  console.log(map.get("food"));
+  console.log(map.get("price"));
+
+
+  // 2. `"price"`라는 키가 있는지 확인 후 true/false 출력
+  console.log(map.has("price"));
+
+
+  // 3. `Map`을 반복문으로 순회하여 `"key = value"` 형식으로 모두 출력하세요
+  map.forEach((value, key) => {
+    console.log(`${key} = ${value}`)
+  });
+</script>
+
+</html>

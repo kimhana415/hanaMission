@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day5</title>
+</head>
+
+<body>
+  <h1>⭐Day 5: 배열(Array) 기초</h1>
+</body>
+<script>
+  // 🔢 **숫자 추가/제거 실습**
+  //   - 빈 배열 `const nums = []` 를 선언하고, `push()`로 1부터 5까지 차례로 추가해 보세요.
+  //   - 그다음 `pop()`을 두 번 호출해서 마지막 두 개 요소를 제거하세요.
+  //   - 각 단계마다 `console.log(nums)`로 배열 상태를 출력해 보세요.
+  const nums = [];
+  nums.push(1);
+  console.log(nums);
+  nums.push(2);
+  console.log(nums);
+  nums.push(3);
+  console.log(nums);
+  nums.push(4);
+  console.log(nums);
+  nums.push(5);
+  console.log(nums);
+  nums.pop();
+  console.log(nums);
+  nums.pop();
+  console.log(nums);
+
+
+  // 🍓 **과일 배열 인덱스 접근**
+  //   - `const fruits = ["🍎","🍌","🍇","🍊","🍉"]` 가 있을 때,
+  //       - 첫 번째 요소와 마지막 요소를 각각 변수 `first`·`last`에 할당하고
+  //       - `"첫 과일은 X, 마지막 과일은 Y입니다."` 형태로 출력하세요.
+  const fruits = ["🍎", "🍌", "🍇", "🍊", "🍉"];
+  const first = fruits[0];
+  const last = fruits[fruits.length - 1];
+  console.log(`첫 과일은 ${first}, 마지막 과일은 ${last}입니다.`);
+
+
+  // 🔄 **첫↔마지막 요소 교환**
+  //   - `const items = ["A","B","C","D"]` 를 복사본 없이(새 배열 생성 없이!) 다음처럼 바꿔 보세요.
+  //       1. 첫 번째 요소와 마지막 요소의 값을 서로 교환
+  //       2. `console.log(items)` 로 결과 확인
+  //   - (힌트: 임시 변수 `tmp`를 사용하거나 배열 디스트럭처링 가능)
+  const items = ["A", "B", "C", "D"];
+  [items[0], items[items.length - 1]] = [items[items.length - 1], items[0]]
+  console.log(items);
+
+
+  // 🎯 **`push` 결과값 활용하기**
+  //   - `const letters = ["X","Y"]` 가 있을 때,
+  //       1. `"Z"` 를 `letters.push("Z")` 로 추가하며 반환된 값을 `newLen`에 저장
+  //       2. `"W"` 를 `letters.push("W")` 로 추가하며 반환된 값을 `newLen2`에 저장
+  //       3. `newLen`, `newLen2`, 그리고 최종 `letters` 배열을 각각 `console.log`로 출력해 보세요.
+  const letters = ["X", "Y"];
+  const newLen = letters.push("Z");
+  const newLen2 = letters.push("W");
+
+  console.log(newLen);
+  console.log(newLen2);
+  console.log(letters);
+</script>
+
+</html>

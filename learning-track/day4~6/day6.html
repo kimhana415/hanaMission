@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day6</title>
+</head>
+
+<body>
+  <h1>⭐Day6-반복문(Loop) 기초</h1>
+</body>
+<script>
+  // 1. 짝수만 출력하기
+  //   - `for` 문을 사용해 1부터 10까지 순회하며,
+  //   - 짝수일 때만 `console.log`로 출력하세요.
+  for (let i = 0; i <= 10; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
+
+
+  // 2. 문자열 배열 뒤집기
+  //   - `for…of` 문으로 `["hello","world"]` 배열을 순회하고,
+  //   - 각 문자열을 뒤집어(`split("").reverse().join("")`) 콘솔에 출력하세요.
+  const arrs = ["hello", "world"];
+  for (const arr of arrs) {
+    const reversed = arr.split("").reverse().join("");
+    console.log(reversed);
+  }
+
+
+  // 3. 무한 루프 탈출**
+  //   - `while(true)` 안에서 `Math.random()`으로 0~1 사이 숫자를 생성하고,
+  //   - 0.9 이상 나올 때까지 계속 반복한 뒤,
+  //   - 몇 번째 시도에 종료되었는지 `console.log`로 출력하세요.
+  let count = 0;
+  while (true) {
+    count++;
+    const random = Math.random();
+
+    if (random >= 0.9) {
+      console.log(`${count} 번째 시도에 종료`);
+      break
+    }
+  }
+</script>
+
+</html>

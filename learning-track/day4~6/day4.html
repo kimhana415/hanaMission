@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day4</title>
+</head>
+
+<body>
+  <h1>🌟 Day 4. 문자열 포맷팅 + 논리 NOT !</h1>
+
+  <h3>1. 이름과 나이를 입력받아 템플릿 리터럴로 출력하는 함수 만들기</h3>
+  <input type="text" placeholder="이름" id="name" />
+  <input type="text" placeholder="나이" id="age" />
+  <button onclick="handlePrint()">출력</button>
+  <p id="output"></p>
+
+  <h3>2. 상품 목록을 `+` 연산자로 이어 붙여서 한 줄 문자열로 변환하기</h3>
+  <p id="fruit"></p>
+
+  <h3>3. 전화번호(숫자)를 `padStart`로 `000-0000-0000` 형태로 포맷팅하기</h3>
+  <p id="phone"></p>
+
+  <h3>4. 사용자 객체(`null`/`undefined`/`{…}`)를 받아 `!`로 로그인 여부 분기 처리하기</h3>
+</body>
+<script>
+  // 1
+  function handlePrint() {
+    const name = document.getElementById('name').value;
+    const age = Number(document.getElementById('age').value);
+    document.getElementById('output').innerText = `이름: ${name}
+    나이: ${age}세`;
+  }
+
+  // 2
+  const fruit1 = "사과";
+  const fruit2 = "바나나";
+  const fruit3 = "포도";
+  document.getElementById('fruit').innerText = "과일1: " + fruit1 + ", 과일2: " + fruit3 + ", 과일3: " + fruit3;
+
+  // 3
+  const phone1 = '';
+  const phone2 = '';
+  const phone3 = '';
+  document.getElementById('phone').innerText = `${phone1.padStart(3, "0")} - ${phone2.padStart(4, "0")} - ${phone3.padStart(4, "0")}`;
+
+  // 4
+  function login(user) {
+    const result = !user ? "로그인 실패" : "로그인 성공";
+    console.log(result);
+  }
+  login(null);
+  login(undefined);
+  login({});
+</script>
+
+</html>

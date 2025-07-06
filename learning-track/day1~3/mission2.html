@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day1~3 추가미션</title>
+</head>
+
+<body>
+  <h1>풀어도 되고~ 안 풀어도 되는 추가문제</h1>
+
+  <h3>문제1 월급을 입력 받기 (단! 세금 10%제외) 나의 연봉을 출력!</h3>
+  <input type="text" placeholder="월급 입력" id="input1" />
+  <button onclick="handle1()">연봉 계산하기</button>
+  <p id="output1"></p>
+
+
+  <h3>문제2 숫자2개 입력 서로 교환(교체) 출력!</h3>
+  <input type="text" placeholder="숫자1 입력" id="input2" />
+  <input type="text" placeholder="숫자2 입력" id="input21" />
+  <button onclick="handle2()">출력</button>
+  <p id="output2"></p>
+
+
+  <h3>문제 3 숫자 2개를 입력 받아, 합 출력</h3>
+  <input type="text" placeholder="숫자1 입력" id="input3" />
+  <input type="text" placeholder="숫자2 입력" id="input31" />
+  <button onclick="handle3()">출력</button>
+  <p id="output3"></p>
+
+
+  <h3>문제 4 숫자 1개를 입력 받아, 홀수이면 True 출력</h3>
+  <input type="text" placeholder="숫자 입력" id="input4" />
+  <button onclick="handle4()">출력</button>
+  <p id="output4"></p>
+
+  <h3>문제 5 성적을 입력 받아, 60점 이상이고 100점 이하이면 True 출력</h3>
+  <input type="text" placeholder="성적 입력" id="input5" />
+  <button onclick="handle5()">출력</button>
+  <p id="output5"></p>
+</body>
+
+<script>
+  // 문제 1
+  function handle1() {
+    const input1 = Number(document.getElementById("input1").value);
+    const annualIncome = input1 * 12; // 연봉
+    const tax = annualIncome * 0.10; // 세금
+    const total = annualIncome - tax;
+
+    document.getElementById("output1").innerText = "출력: " + total.toLocaleString() + "원";
+  }
+
+  // 문제 2
+  function handle2() {
+    const input2 = Number(document.getElementById("input2").value);
+    const input21 = Number(document.getElementById("input21").value);
+    const change = [input2, input21].reverse();
+    document.getElementById("output2").innerText = "출력: " + change;
+  }
+
+  // 문제 3
+  function handle3() {
+    const input3 = Number(document.getElementById("input3").value);
+    const input31 = Number(document.getElementById("input31").value);
+    const sum = input3 + input31;
+    document.getElementById("output3").innerText = "출력: " + sum;
+  }
+
+  // 문제 4
+  function handle4() {
+    const input4 = Number(document.getElementById("input4").value);
+    const isOdd = input4 % 2 !== 0;
+    document.getElementById("output4").innerText = "출력: " + isOdd;
+  }
+
+  // 문제 5
+  function handle5() {
+    const input5 = Number(document.getElementById("input5").value);
+    const isGrade = input5 >= 60 && input5 <= 100;
+    document.getElementById("output5").innerText = "출력: " + isGrade;
+  }
+</script>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day7~10 미션</title>
+</head>
+
+<body>
+  <h1>🎯 자바스크립트 통합 미션 (Day7~10)</h1>
+</body>
+<script>
+  // 미션 1: 출석부 시스템 만들기 ✅ 배열 + 객체 + 조건문 활용
+
+  // 📌 목표
+  // - 학생 이름과 출석 여부를 관리
+  // - 출석한 학생만 출력하기
+
+  // 🔥 해야 할 것
+  // 1) 출석한 학생만 반복문으로 출력
+  // 출력 결과: "지훈 출석", "동원 출석"
+
+  // 💡 힌트: 객체 배열을 for문으로 순회하면서 attend가 true인 경우만 출력!
+
+  let students = [
+    { name: "지훈", attend: true },
+    { name: "연화", attend: false },
+    { name: "동원", attend: true }
+  ];
+
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].attend === true) {
+      console.log(`${students[i].name} 출석`);
+    }
+  }
+
+
+  // 🧩 미션 2: 주문 처리 시스템 ✅ 배열 + 객체 + push/pop
+
+  // 📌 목표
+  // - 음식 주문 목록을 관리하는 배열 만들기
+  // - 주문을 추가하고 마지막 주문 취소 처리하기
+
+  // 🔥 해야 할 것
+  // 1) "치킨", "피자", "햄버거" 순서로 주문 추가
+  // 2) 마지막 주문(pop) 취소
+  // 3) 최종 주문 목록 출력
+
+  // 💡 힌트: .push()로 추가하고 .pop()으로 제거, console.log(orders)로 확인
+
+  let orders = [];
+  const food = ["치킨", "피자", "햄버거"];
+  for (i = 0; i < food.length; i++) {
+    orders.push(food[i]);
+  }
+  orders.pop();
+  console.log(orders);
+
+
+  // 🧩 미션 3: 점수 기록과 등급 부여 ✅ 배열 + 반복문 + 조건 + Map
+
+  // 📌 목표
+  // - 학생 이름과 점수를 관리
+  // - 점수에 따라 등급 부여하기 (90 이상 A, 80 이상 B, 나머지 C)
+
+  // 🔥 해야 할 것
+  // 1) Map을 순회하면서 각 학생의 등급을 출력
+  // 예시: "지훈: A", "연화: B", "동원: C"
+
+  // 💡 힌트: for...of와 scores.entries() 조합, 조건문으로 등급 판단
+
+  //.entries() [key, value] 구조를 만들어주는 메서드
+
+  let scores = new Map();
+  scores.set("지훈", 95);
+  scores.set("연화", 82);
+  scores.set("동원", 76);
+  console.log(scores);
+
+  for (const [key, value] of scores.entries()) {
+    let grade = "";
+
+    if (value >= 90) {
+      grade = "A";
+    } else if (value >= 80) {
+      grade = "B";
+    } else {
+      grade = "C";
+    }
+
+    console.log(`${key}: ${grade}`);
+  }
+</script>
+
+</html>

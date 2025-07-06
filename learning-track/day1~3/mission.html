@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day1~3 미션</title>
+</head>
+
+<body>
+  <h1>🎮 추가미션: Day 1~3 종합 실습문제 4개</h1>
+</body>
+
+<script>
+  // 실습 문제 1: 자기소개 출력기
+  // 이름과 나이를 입력받아 다음 문장을 출력하세요.
+  // `"안녕하세요. 저는 [이름]이고, [나이]살입니다."`
+  let name = "하나";
+  let age = 20;
+
+  console.log(`안녕하세요. 저는 ${name}이고, ${age}살입니다.`);
+
+
+  // 실습 문제 2: 간단한 계산기
+  // 두 숫자와 연산자(+, -, *, /)를 입력받아 결과를 출력하세요.
+  let num1 = 10;
+  let num2 = 4;
+
+  console.log(num1 + num2);
+  console.log(num1 - num2);
+  console.log(num1 * num2);
+  console.log(num1 / num2);
+
+
+  // 실습 문제 3: 짝수/홀수 판별기
+  // 숫자를 하나 선언하고, 짝수면 "짝수", 아니면 "홀수"를 출력하세요.
+  const number = 5;
+
+  if (number / 2 === 0) {
+    console.log("짝수");
+  } else {
+    console.log("홀수");
+  }
+
+
+  // 실습 문제 4: 간단한 로그인 체크 게임
+  // 로그인(isLogin = true)과 관리자 여부(isAdmin = true)에 따라
+  // “관리자 페이지 접속 성공” 또는 “접근 불가” 출력
+  const isLogin = true;
+  const isAdmin = true;
+
+  if (isLogin && isAdmin) {
+    alert("관리자 페이지 접속 성공");
+  } else {
+    alert("접근 불가");
+  };
+</script>
+
+</html>

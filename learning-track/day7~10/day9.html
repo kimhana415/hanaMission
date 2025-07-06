@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day9</title>
+</head>
+
+<body>
+  <h1>📘 Day9: 객체(Object) 자료형</h1>
+</body>
+<script>
+  // 1. 학생 객체 `{ name: "영희", grade: 2 }`를 만들고 학년을 3으로 바꾸세요
+  const students = {
+    name: "영희",
+    grade: 2
+  }
+  students.grade = 3;
+  console.log(students);
+
+
+  // 2. 동물 객체에 `"sound": "멍멍"`을 추가하고 출력하세요
+  const animals = {
+    name: "강아지",
+  }
+  animals.sound = "멍멍";
+  console.log(animals);
+
+
+  // 3. 아래 객체를 `for...in` 문으로 모두 출력하세요
+  let fruit = { name: "사과", color: "빨강", price: 1200 };
+  for (let key in fruit) {
+    console.log(key + ":", fruit[key]);
+  }
+</script>
+
+</html>
