@@ -1,17 +1,77 @@
+section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+/* 박스모델 이해하기 */
 .box {
   border: 2px solid #666;
   padding: 20px;
   margin: 20px;
 }
 
+/* 트렌지션과 호버 */
 button {
-  padding: 4px 20px;
+  padding: 8px 20px;
   background-color: blueviolet;
   color: #fff;
   transition: all ease-in-out 0.5s;
 }
-
 button:hover {
   background-color: blue;
+}
 
+/* 시멘틱 태그를 사용하여 블로그 만들기 */
+.blog {
+  width: 500px;
+}
+header,
+nav,
+main,
+article,
+aside,
+footer {
+  padding: 20px;
+}
+header {
+  background: #4caf50;
+  color: #fff;
+}
+h1 {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+nav {
+  background: #f5f5f5;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+article {
+  margin-bottom: 20px;
+}
+footer {
+  background: #333;
+  color: #ccc;
+  text-align: center;
+}
+
+/* table에 css 적용하기 */
+table th,
+table td {
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+table th {
+  background-color: #333;
+  color: #fff;
+}
+table td:hover {
+  background-color: #eee;
 }
